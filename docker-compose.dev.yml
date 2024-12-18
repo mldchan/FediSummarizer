@@ -1,0 +1,11 @@
+
+services:
+  fedi-summarizer:
+    build: .
+    env_file: .env
+    develop:
+      watch:
+        - path: main.py
+          action: rebuild
+        - path: requirements.txt
+          action: rebuild
